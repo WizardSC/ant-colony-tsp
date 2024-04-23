@@ -21,9 +21,9 @@ def main():
         
         cities = []
         points = []
-        input_file_name = 'D:\\NewPython\\ant-colony-tsp\\data\\kroA150.tsp'
+        input_file_name = 'D:\\NewPython\\ant-colony-tsp\\data\\eil101.tsp'
         base_file_name = os.path.splitext(os.path.basename(input_file_name))[0]
-        output_file_name = os.path.join('D:\\NewPython\\ant-colony-tsp\\data', base_file_name + '_matrix.txt')
+        output_file_name = os.path.join('data/', base_file_name + '_matrix.txt')
         
         with open(input_file_name) as f:
             for line in f.readlines():
