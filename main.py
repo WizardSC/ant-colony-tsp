@@ -21,9 +21,9 @@ def main():
         
         cities = []
         points = []
-        input_file_name = 'D:\\NewPython\\ant-colony-tsp\\data\\eil101.tsp'
+        input_file_name = 'data/berlin52.tsp'
         base_file_name = os.path.splitext(os.path.basename(input_file_name))[0]
-        output_file_name = os.path.join('data/', base_file_name + '_matrix.txt')
+        # output_file_name = os.path.join('data/', base_file_name + '_matrix.txt')
         
         with open(input_file_name) as f:
             for line in f.readlines():
@@ -47,7 +47,7 @@ def main():
                 row.append(distance(cities[i], cities[j]))
             cost_matrix.append(row)
         
-        aco = ACO(50, 200, 1.0, 2.0, 0.5, 100, 2)
+        aco = ACO(50, 400, 1.0, 2.0, 0.5, 100, 2)
         graph = Graph(cost_matrix, rank)
         path, cost = aco.solve(graph)
         total_cost += cost
