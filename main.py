@@ -21,11 +21,11 @@ def main():
     # Chạy chương trình 10 lần
     for _ in range(10):  
         start_time = time.time()  # Thời điểm bắt đầu thực thi chương trình
-        cities = [] #Mảng thành phố
-        points = [] #Mảng tọa độ x,y đầu vào
-        #File đầu vào
+        
+        cities = []
+        points = []
         input_file_name = "ant-colony-tsp/data/berlin52.tsp"
-        # base_file_name = os.path.splitext(os.path.basename(input_file_name))[0]
+        base_file_name = os.path.splitext(os.path.basename(input_file_name))[0]
         # output_file_name = os.path.join('data/', base_file_name + '_matrix.txt')
         
         with open(input_file_name) as f:
